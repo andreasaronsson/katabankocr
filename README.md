@@ -1,0 +1,2 @@
+# katabankocr
+OCR kata
