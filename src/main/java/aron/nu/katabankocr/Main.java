@@ -8,7 +8,6 @@ import static javaslang.API.Match;
 import static javaslang.Predicates.is;
 import static javaslang.collection.Array.collector;
 
-import java.io.IOException;
 import java.nio.file.Path;
 
 import org.slf4j.Logger;
@@ -34,7 +33,6 @@ public class Main {
      * main
      * 
      * @param args
-     * @throws IOException
      */
     public static void main(String[] args) {
         String pathToTestFiles = "./src/test/resources/";
