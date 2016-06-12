@@ -18,6 +18,7 @@ import javaslang.Tuple;
 import javaslang.Tuple3;
 import javaslang.collection.Array;
 import javaslang.collection.CharSeq;
+import javaslang.collection.List;
 import javaslang.control.Try;
 
 /**
@@ -36,10 +37,10 @@ public class Main {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        String pathName = "./src/test/resources/123456789";
-        Path path = get(pathName);
-        String result = readResultFor(path);
-        log.info("Result {} correct {}", result, path.getFileName());
+        String pathToTestFiles = "./src/test/resources/";
+        List<String> values = List.of("123456789", "111111111", "222222222", "333333333", "444444444", "555555555",
+                "666666666", "777777777", "888888888", "999999999");
+        assert values.forAll(s -> s.equals(readResultFor(get(pathToTestFiles + s))));
     }
 
     private static String readResultFor(Path pathName) {
