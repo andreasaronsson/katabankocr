@@ -32,7 +32,7 @@ public class Main {
     /**
      * main
      * 
-     * @param args
+     * @param args args
      */
     public static void main(String[] args) {
         String pathToTestFiles = "./src/test/resources/";
