@@ -38,9 +38,8 @@ class Bars {
                     && Objects.equals(downRight, o.downRight) && Objects.equals(middle, o.middle)
                     && Objects.equals(top, o.top) && Objects.equals(upLeft, o.upLeft)
                     && Objects.equals(upRight, o.upRight);
-        } else {
-            return false;
         }
+        return false;
     }
 
     @Override

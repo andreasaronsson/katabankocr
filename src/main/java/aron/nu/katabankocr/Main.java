@@ -31,7 +31,7 @@ public class Main {
 
     /**
      * main
-     * 
+     *
      * @param args
      *            args
      */
@@ -42,7 +42,7 @@ public class Main {
         assert values.forAll(s -> s.equals(readResultFor(get(pathToTestFiles + s))));
     }
 
-    private static String readResultFor(Path pathName) {
+    static String readResultFor(Path pathName) {
         Tuple3<CharSeq, CharSeq, CharSeq> row = readRowsFromFile(pathName);
         Bars firstPosition = findBars(row, 1, Tuple.of(0, 1, 2), Tuple.of(0, 1, 2));
         Bars secondPosition = findBars(row, 4, Tuple.of(3, 4, 5), Tuple.of(3, 4, 5));
@@ -66,20 +66,13 @@ public class Main {
 
     private static Bars findBars(Tuple3<CharSeq, CharSeq, CharSeq> row, int first,
             Tuple3<Integer, Integer, Integer> second, Tuple3<Integer, Integer, Integer> third) {
-        boolean top = Match(row._1.get(first)).of(
-                Case($('_'), true), Case($(), false));
-        boolean upLeft = Match(row._2.get(second._1)).of(
-                Case($('|'), true), Case($(), false));
-        boolean middle = Match(row._2.get(second._2)).of(
-                Case($('_'), true), Case($(), false));
-        boolean upRight = Match(row._2.get(second._3)).of(
-                Case($('|'), true), Case($(), false));
-        boolean downLeft = Match(row._3.get(third._1)).of(
-                Case($('|'), true), Case($(), false));
-        boolean bottom = Match(row._3.get(third._2)).of(
-                Case($('_'), true), Case($(), false));
-        boolean downRight = Match(row._3.get(third._3)).of(
-                Case($('|'), true), Case($(), false));
+        boolean top = Match(row._1.get(first)).of(Case($('_'), true), Case($(), false));
+        boolean upLeft = Match(row._2.get(second._1)).of(Case($('|'), true), Case($(), false));
+        boolean middle = Match(row._2.get(second._2)).of(Case($('_'), true), Case($(), false));
+        boolean upRight = Match(row._2.get(second._3)).of(Case($('|'), true), Case($(), false));
+        boolean downLeft = Match(row._3.get(third._1)).of(Case($('|'), true), Case($(), false));
+        boolean bottom = Match(row._3.get(third._2)).of(Case($('_'), true), Case($(), false));
+        boolean downRight = Match(row._3.get(third._3)).of(Case($('|'), true), Case($(), false));
         return new Bars(top, upLeft, middle, upRight, downLeft, bottom, downRight);
     }
 
@@ -94,7 +87,7 @@ public class Main {
         Bars seven = new Bars(true, false, false, true, false, false, true);
         Bars eight = new Bars(true, true, true, true, true, true, true);
         Bars nine = new Bars(true, true, true, true, false, true, true);
-        return Match(bars).of(
+        String retval = Match(bars).of(
                 Case(is(zero), "0"),
                 Case(is(one), "1"),
                 Case(is(two), "2"),
@@ -106,5 +99,6 @@ public class Main {
                 Case(is(eight), "8"),
                 Case(is(nine), "9"),
                 Case($(), ""));
+        return retval;
     }
 }
