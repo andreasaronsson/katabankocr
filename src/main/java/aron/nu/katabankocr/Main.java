@@ -1,7 +1,6 @@
 package aron.nu.katabankocr;
 
 import static java.nio.file.Files.lines;
-import static java.nio.file.Paths.get;
 import static javaslang.API.$;
 import static javaslang.API.Case;
 import static javaslang.API.Match;
@@ -17,7 +16,6 @@ import javaslang.Tuple;
 import javaslang.Tuple3;
 import javaslang.collection.Array;
 import javaslang.collection.CharSeq;
-import javaslang.collection.List;
 import javaslang.control.Try;
 
 /**
@@ -25,22 +23,6 @@ import javaslang.control.Try;
  */
 public class Main {
     static final Logger log = LoggerFactory.getLogger(Main.class);
-
-    private Main() {
-    }
-
-    /**
-     * main
-     *
-     * @param args
-     *            args
-     */
-    public static void main(String[] args) {
-        String pathToTestFiles = "./src/test/resources/";
-        List<String> values = List.of("123456789", "111111111", "222222222", "333333333", "444444444", "555555555",
-                "666666666", "777777777", "888888888", "999999999");
-        assert values.forAll(s -> s.equals(readResultFor(get(pathToTestFiles + s))));
-    }
 
     static String readResultFor(Path pathName) {
         Tuple3<CharSeq, CharSeq, CharSeq> row = readRowsFromFile(pathName);
@@ -87,7 +69,7 @@ public class Main {
         Bars seven = new Bars(true, false, false, true, false, false, true);
         Bars eight = new Bars(true, true, true, true, true, true, true);
         Bars nine = new Bars(true, true, true, true, false, true, true);
-        String retval = Match(bars).of(
+        return Match(bars).of(
                 Case(is(zero), "0"),
                 Case(is(one), "1"),
                 Case(is(two), "2"),
@@ -99,6 +81,5 @@ public class Main {
                 Case(is(eight), "8"),
                 Case(is(nine), "9"),
                 Case($(), ""));
-        return retval;
     }
 }
