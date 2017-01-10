@@ -1,0 +1,15 @@
+modelVersion: 4.0.0
+artifactId: katabankocr
+version: 1-SNAPSHOT
+packaging: jar
+properties: {project.build.sourceEncoding: UTF-8}
+name: katabankocr
+dependencies:
+- {artifactId: assertj-core, groupId: org.assertj, version: 3.6.1}
+- {artifactId: javaslang, groupId: io.javaslang, version: 2.0.5}
+- {artifactId: slf4j-api, groupId: org.slf4j, version: 1.7.22}
+- {artifactId: slf4j-simple, groupId: org.slf4j, version: 1.7.22}
+- {artifactId: junit, groupId: junit, scope: test, version: 4.12}
+- {artifactId: hamcrest-all, groupId: org.hamcrest, version: 1.3}
+build: {}
+parent: {artifactId: maven-plugins, groupId: aron.nu, relativePath: '', version: 9}
