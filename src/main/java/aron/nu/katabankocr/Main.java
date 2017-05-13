@@ -1,27 +1,26 @@
 package aron.nu.katabankocr;
 
+import static io.vavr.API.$;
+import static io.vavr.API.Case;
+import static io.vavr.API.Match;
+import static io.vavr.collection.Array.collector;
 import static java.nio.file.Files.lines;
-import static javaslang.API.$;
-import static javaslang.API.Case;
-import static javaslang.API.Match;
-import static javaslang.Predicates.is;
-import static javaslang.collection.Array.collector;
 
 import java.nio.file.Path;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javaslang.Tuple;
-import javaslang.Tuple3;
-import javaslang.collection.Array;
-import javaslang.collection.CharSeq;
-import javaslang.control.Try;
+import io.vavr.Tuple;
+import io.vavr.Tuple3;
+import io.vavr.collection.Array;
+import io.vavr.collection.CharSeq;
+import io.vavr.control.Try;
 
 /**
  * Entry point
  */
-public class Main {
+public class Main { // NOSONAR
     static final Logger log = LoggerFactory.getLogger(Main.class);
 
     static String readResultFor(Path pathName) {
@@ -70,16 +69,16 @@ public class Main {
         Bars eight = new Bars(true, true, true, true, true, true, true);
         Bars nine = new Bars(true, true, true, true, false, true, true);
         return Match(bars).of(
-                Case(is(zero), "0"),
-                Case(is(one), "1"),
-                Case(is(two), "2"),
-                Case(is(three), "3"),
-                Case(is(four), "4"),
-                Case(is(five), "5"),
-                Case(is(six), "6"),
-                Case(is(seven), "7"),
-                Case(is(eight), "8"),
-                Case(is(nine), "9"),
+                Case($(zero), "0"),
+                Case($(one), "1"),
+                Case($(two), "2"),
+                Case($(three), "3"),
+                Case($(four), "4"),
+                Case($(five), "5"),
+                Case($(six), "6"),
+                Case($(seven), "7"),
+                Case($(eight), "8"),
+                Case($(nine), "9"),
                 Case($(), ""));
     }
 }

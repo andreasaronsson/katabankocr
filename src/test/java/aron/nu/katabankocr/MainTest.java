@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-import javaslang.collection.List;
+import io.vavr.collection.List;
 
 public class MainTest {
 
