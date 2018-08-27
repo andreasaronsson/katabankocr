@@ -1,4 +1,4 @@
-package aron.nu.katabankocr;
+package nu.aron.katabankocr;
 
 import static io.vavr.API.$;
 import static io.vavr.API.Case;

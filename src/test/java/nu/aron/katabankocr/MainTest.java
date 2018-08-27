@@ -1,4 +1,4 @@
-package aron.nu.katabankocr;
+package nu.aron.katabankocr;
 
 import static java.nio.file.Paths.get;
 import static org.hamcrest.Matchers.is;
@@ -7,6 +7,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 import io.vavr.collection.List;
+import nu.aron.katabankocr.Main;
 
 public class MainTest {
 

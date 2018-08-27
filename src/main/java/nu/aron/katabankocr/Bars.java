@@ -1,4 +1,4 @@
-package aron.nu.katabankocr;
+package nu.aron.katabankocr;
 
 import java.util.Objects;
 
