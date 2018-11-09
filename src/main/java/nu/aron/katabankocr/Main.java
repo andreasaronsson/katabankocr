@@ -19,6 +19,9 @@ import io.vavr.control.Try;
 
 /**
  * Entry point
+ *
+ * @author andreasa
+ * @version $Id: $Id
  */
 public class Main { // NOSONAR
     static final Logger log = LoggerFactory.getLogger(Main.class);

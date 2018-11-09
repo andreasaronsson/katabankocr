@@ -22,11 +22,13 @@ class Bars {
         this.downRight = downRight;
     }
 
+    /** {@inheritDoc} */
     @Override
     public int hashCode() {
         return Objects.hash(bottom, downLeft, downRight, middle, top, upLeft, upRight);
     }
 
+    /** {@inheritDoc} */
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -42,6 +44,7 @@ class Bars {
         return false;
     }
 
+    /** {@inheritDoc} */
     @Override
     public String toString() {
         return "Bars [top=" + top + ", upLeft=" + upLeft + ", middle=" + middle + ", upRight=" + upRight + ", downLeft="
