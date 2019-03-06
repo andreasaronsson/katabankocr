@@ -21,14 +21,12 @@ import io.vavr.control.Try;
 /**
  * Entry point
  *
- * @author andreasa
- * @version $Id: $Id
  */
 public class Main { // NOSONAR
     static final Logger log = LoggerFactory.getLogger(Main.class);
 
     static String readResultFor(Path pathName) {
-        Tuple3<CharSeq, CharSeq, CharSeq> row = readRowsFromFile(pathName);
+        var row = readRowsFromFile(pathName);
         Bars firstPosition = findBars(row, 1, Tuple.of(0, 1, 2), Tuple.of(0, 1, 2));
         Bars secondPosition = findBars(row, 4, Tuple.of(3, 4, 5), Tuple.of(3, 4, 5));
         Bars thirdPosition = findBars(row, 7, Tuple.of(6, 7, 8), Tuple.of(6, 7, 8));

@@ -12,7 +12,7 @@ class MainTest {
     @Test
     void testMain() {
         String pathToTestFiles = "./src/test/resources/";
-        List<String> values = List.of("123456789", "111111111", "222222222", "333333333", "444444444", "555555555",
+        var values = List.of("123456789", "111111111", "222222222", "333333333", "444444444", "555555555",
                 "666666666", "777777777", "888888888", "999999999");
         assertTrue(values.forAll(s -> s.equals(Main.readResultFor(get(pathToTestFiles + s)))));
     }
