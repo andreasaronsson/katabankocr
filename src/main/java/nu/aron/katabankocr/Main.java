@@ -4,6 +4,7 @@ import static io.vavr.API.$;
 import static io.vavr.API.Case;
 import static io.vavr.API.Match;
 import static io.vavr.collection.Array.collector;
+
 import static java.nio.file.Files.lines;
 
 import java.nio.file.Path;
