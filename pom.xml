@@ -10,7 +10,7 @@
   <parent>
     <groupId>nu.aron</groupId>
     <artifactId>maven-plugins</artifactId>
-    <version>6</version>
+    <version>7</version>
     <relativePath />
   </parent>
   <dependencies>
