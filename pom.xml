@@ -1,7 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>nu.aron</groupId>
+    <artifactId>maven-plugins</artifactId>
+    <version>11</version>
+    <relativePath></relativePath>
+  </parent>
   <artifactId>katabankocr</artifactId>
   <version>1-SNAPSHOT</version>
   <name>katabankocr</name>
@@ -9,12 +15,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.jupiter.version>5.4.0</junit.jupiter.version>
   </properties>
-  <parent>
-    <groupId>nu.aron</groupId>
-    <artifactId>maven-plugins</artifactId>
-    <version>9</version>
-    <relativePath />
-  </parent>
   <dependencies>
     <dependency>
       <groupId>org.assertj</groupId>
