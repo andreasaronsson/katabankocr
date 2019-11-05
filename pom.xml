@@ -7,12 +7,13 @@
     <relativePath/>
   </parent>
   <artifactId>katabankocr</artifactId>
-  <version>1-SNAPSHOT</version>
+  <version>1</version>
   <name>katabankocr</name>
   <scm>
     <connection>scm:git:git@github.com:andreasaronsson/katabankocr.git</connection>
     <developerConnection>scm:git:git@github.com:andreasaronsson/katabankocr.git</developerConnection>
     <url>https://github.com/andreasaronsson/katabankocr</url>
+<tag>rel-1</tag>
   </scm>
   <distributionManagement>
     <repository>
@@ -74,4 +75,9 @@
       <version>3.0.2</version>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      
+    </plugins>
+  </build>
 </project>
