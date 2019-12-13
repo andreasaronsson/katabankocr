@@ -5,7 +5,7 @@
   <parent>
     <groupId>nu.aron</groupId>
     <artifactId>maven-plugins</artifactId>
-    <version>12</version>
+    <version>17</version>
     <relativePath></relativePath>
   </parent>
   <artifactId>katabankocr</artifactId>
