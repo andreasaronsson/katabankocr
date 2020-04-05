@@ -9,7 +9,7 @@
     <relativePath></relativePath>
   </parent>
   <artifactId>katabankocr</artifactId>
-  <version>1.0.5</version>
+  <version>LATEST</version>
   <name>katabankocr</name>
   <scm>
     <connection>scm:git:git@github.com:andreasaronsson/katabankocr.git</connection>
