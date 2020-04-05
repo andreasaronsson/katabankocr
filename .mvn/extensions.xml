@@ -3,6 +3,6 @@
   <extension>
     <groupId>nu.aron</groupId>
     <artifactId>nextversion-maven-plugin</artifactId>
-    <version>13</version>
+    <version>16</version>
   </extension>
 </extensions> 
